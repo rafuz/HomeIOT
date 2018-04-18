@@ -3,6 +3,7 @@ volumes:
     resin-data:
     mqtt-data:
     node-red-data:
+    mqtt-bridge-data:
 services:
     mosquitto:
         build: ./docker-rpi-mosquitto
@@ -18,3 +19,9 @@ services:
             - "80:80"
         volumes:
             - "node-red-data:/data/node-red"
+    mqtt-bridge:
+        image: stjohnjohnson/smartthings-mqtt-bridge
+        volumes:
+            - "mqtt-bridge-data:/config"
+        ports:
+            - "8080:8080"
