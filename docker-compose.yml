@@ -9,12 +9,12 @@ services:
             - "1883:1883"
             - "9001:9001"
         volumes:
-            - "resin-data/mqtt/data:/mqtt/data"
-            - "resin-data/mqtt/log:/mqtt/log"
-            - "resin-data/mqtt/config:/mqtt/config"
+            - "resin-data:/mqtt/data"
+            - "resin-data:/mqtt/log"
+            - "resin-data:/mqtt/config"
     node-red:
         build: ./resin-node-red
         ports:
             - "80:80"
         volumes:
-            - "resin-data/node-red:/data/node-red"
+            - "resin-data:/data/node-red"
