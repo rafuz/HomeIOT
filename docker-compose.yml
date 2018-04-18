@@ -1,6 +1,6 @@
 version: '2'
 volumes:
-    mqtt-data:
+    mosquitto-data:
     node-red-data:
     mqtt-bridge-data:
 services:
@@ -11,9 +11,7 @@ services:
             - "1883:1883"
             - "9001:9001"
         volumes:
-            - "mqtt-data:/mqtt/config"
-            - "mqtt-data:/mqtt/data"
-            - "mqtt-data:/mqtt/log"
+            - "mosquitto-data:/mqtt"
     node-red:
         build: ./resin-node-red
         ports:
