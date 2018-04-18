@@ -1,6 +1,8 @@
 version: '2'
 volumes:
     resin-data:
+    mqtt-data:
+    node-red-data:
 services:
     mosquitto:
         build: ./docker-rpi-mosquitto
@@ -9,12 +11,10 @@ services:
             - "1883:1883"
             - "9001:9001"
         volumes:
-            - "resin-data:/mqtt/data"
-            - "resin-data:/mqtt/log"
-            - "resin-data:/mqtt/config"
+            - "mqtt-data:/mqtt"
     node-red:
         build: ./resin-node-red
         ports:
             - "80:80"
         volumes:
-            - "resin-data:/data/node-red"
+            - "node-red-data:/data/node-red"
