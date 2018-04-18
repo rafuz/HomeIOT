@@ -20,6 +20,7 @@ services:
         volumes:
             - "node-red-data:/data/node-red"
     mqtt-bridge:
+        build: ./docker-mqtt-bridge
         image: stjohnjohnson/smartthings-mqtt-bridge
         volumes:
             - "mqtt-bridge-data:/config"
