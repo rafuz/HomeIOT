@@ -16,5 +16,3 @@ services:
 	build: ./resin-node-red
 	ports:
 	    - "80:80"
-	volumes:
-            - "resin-data:/node-red"
