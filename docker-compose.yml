@@ -10,7 +10,8 @@ services:
             - "9001:9001"
         volumes:
             - "resin-data:/mqtt/data"
-            - "resin-data:/mqtt/logs"
+            - "resin-data:/mqtt/log"
+            - "resin-data:/mqtt/config"
     node-red:
 	build: ./resin-node-red
 	ports:
