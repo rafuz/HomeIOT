@@ -11,5 +11,10 @@ services:
         volumes:
             - "resin-data:/mqtt/data"
             - "resin-data:/mqtt/logs"
-
+    node-red:
+	build: ./resin-node-red
+	ports:
+	    - "80:80"
+	volumes:
+	    - "resin-data:/data/node-red"
         
