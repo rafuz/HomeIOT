@@ -17,5 +17,4 @@ services:
 	ports:
 	    - "80:80"
 	volumes:
-	    - "resin-data:/node-red"
-        
+            - "resin-data:/node-red"
