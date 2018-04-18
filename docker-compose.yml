@@ -13,6 +13,6 @@ services:
             - "resin-data:/mqtt/log"
             - "resin-data:/mqtt/config"
     node-red:
-	build: ./resin-node-red
-	ports:
-	    - "80:80"
+        build: ./resin-node-red
+        ports:
+            - "80:80"
