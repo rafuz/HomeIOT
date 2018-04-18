@@ -1,4 +1,6 @@
 version: '2'
+volumes:
+    resin-data:
 services:
     mosquitto:
         build: ./docker-rpi-mosquitto
