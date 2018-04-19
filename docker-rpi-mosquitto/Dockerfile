@@ -15,7 +15,7 @@ RUN mkdir -p /mqtt/config /mqtt/data /mqtt/log
 COPY config /mqtt/config
 RUN chown -R mosquitto:mosquitto /mqtt
 
-VOLUME ["/mqtt/config", "/mqtt/data", "/mqtt/log"]
+VOLUME ["/mqtt"]
 
 EXPOSE 1883 9001
 
