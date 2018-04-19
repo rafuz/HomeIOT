@@ -31,7 +31,6 @@ services:
         links:
             - mosquitto
     hass:
-        container_name: hass
         image: lroguet/rpi-home-assistant:latest
         net: host
         volumes:
