@@ -15,7 +15,7 @@ services:
     node-red:
         build: ./resin-node-red
         ports:
-            - "80:$process.env.PORT"
+            - "80:8081"
         volumes:
             - "node-red-data:/data/node-red"
         links:
