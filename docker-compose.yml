@@ -22,9 +22,8 @@ services:
         links:
             - mosquitto
     hass:
-        build: ./docker-home-assistant
         image: lroguet/rpi-home-assistant:latest
-        net: host
+        net: "host"
         volumes:
             - hass-data:/config
             - /etc/localtime:/etc/localtime:ro
