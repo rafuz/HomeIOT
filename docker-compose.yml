@@ -21,6 +21,13 @@ services:
             - "node-red-data:/data/node-red"
         links:
             - mosquitto
+    hass:
+        container_name: hass
+        image: lroguet/rpi-home-assistant:latest
+        net: host
+        volumes:
+            - hass-data:/config
+            - /etc/localtime:/etc/localtime:ro
     mqtt-bridge:
         build: ./docker-mqtt-bridge
         image: stjohnjohnson/smartthings-mqtt-bridge
@@ -30,10 +37,3 @@ services:
             - "8080:8080"
         links:
             - mosquitto
-    home-assistant:
-        container_name: hass
-        image: lroguet/rpi-home-assistant:latest
-        net: host
-        volumes:
-            - hass-data:/config
-            - /etc/localtime:/etc/localtime:ro
