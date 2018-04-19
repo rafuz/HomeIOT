@@ -23,7 +23,7 @@ services:
             - mosquitto
     hass:
         container_name: hass
-        image: lroguet/rpi-home-assistant:latest
+        image: lroguet/rpi-home-assistant
         net: host
         volumes:
             - hass-data:/config
