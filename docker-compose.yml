@@ -3,6 +3,7 @@ volumes:
     mosquitto-data:
     node-red-data:
     mqtt-bridge-data:
+    hass-data:
 services:
     mosquitto:
         build: ./docker-rpi-mosquitto
@@ -29,3 +30,10 @@ services:
             - "8080:8080"
         links:
             - mosquitto
+    hass:
+        container_name: hass
+        image: lroguet/rpi-home-assistant:latest
+        net: host
+        volumes:
+            - hass-data:/config
+            - /etc/localtime:/etc/localtime:ro
