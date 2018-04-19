@@ -30,7 +30,8 @@ services:
             - "8080:8080"
         links:
             - mosquitto
-    hass:
+    home-assistant:
+        container_name: hass
         image: lroguet/rpi-home-assistant:latest
         net: host
         volumes:
