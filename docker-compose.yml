@@ -23,7 +23,7 @@ services:
             - mosquitto
     hass:
         image: lroguet/rpi-home-assistant:latest
-        net: "host"
+        network_mode: "host"
         volumes:
             - hass-data:/config
             - /etc/localtime:/etc/localtime:ro
