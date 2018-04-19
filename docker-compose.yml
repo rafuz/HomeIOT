@@ -26,7 +26,6 @@ services:
         network_mode: "host"
         volumes:
             - hass-data:/config
-            - /etc/localtime:/etc/localtime:ro
     mqtt-bridge:
         build: ./docker-mqtt-bridge
         image: stjohnjohnson/smartthings-mqtt-bridge
