@@ -22,8 +22,8 @@ services:
         links:
             - mosquitto
     hass:
-        container_name: hass
-        image: lroguet/rpi-home-assistant
+        build: ./docker-home-assistant
+        image: lroguet/rpi-home-assistant:latest
         net: host
         volumes:
             - hass-data:/config
