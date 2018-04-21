@@ -37,7 +37,7 @@ services:
         links:
             - mosquitto
     sono-api:
-        build: ./docker-sono-api
+        build: ./docker-sonos-api
         ports:
             - "80:80"
         volumes:
