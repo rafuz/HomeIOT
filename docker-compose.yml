@@ -4,6 +4,7 @@ volumes:
     node-red-data:
     mqtt-bridge-data:
     hass-data:
+    sonos-api-data:
 services:
     mosquitto:
         build: ./docker-rpi-mosquitto
@@ -16,7 +17,7 @@ services:
     node-red:
         build: ./resin-node-red
         ports:
-            - "80:80"
+            - "8081:8081"
         volumes:
             - "node-red-data:/data/node-red"
         links:
@@ -35,3 +36,9 @@ services:
             - "8080:8080"
         links:
             - mosquitto
+    sono-api:
+        build: ./docker-sono-api
+        ports:
+            - "80:80"
+        volumes:
+            - "sonos-api-data:/data"

@@ -1,0 +1,28 @@
+{
+  "players": [
+    {
+      "roomName": "Studio",
+      "volume": 15
+    },
+    {
+      "roomName": "Bagno",
+      "volume": 15
+    },
+    {
+      "roomName": "Camera matrim.",
+      "volume": 15
+    },
+    {
+      "roomName":"Camera da letto 2",
+      "volume": 15
+    }
+  ],
+  "playMode": {
+    "shuffle": false,
+    "repeat": "none",
+    "crossfade": false
+  },
+  "pauseOthers": false,
+  "favorite": "Radio Deejay"
+}
+
