@@ -3,4 +3,4 @@ WORKDIR /usr/src/app
 COPY . .
 RUN npm install
 CMD ["npm", "start"]
-VOLUME /config
+VOLUME /data
