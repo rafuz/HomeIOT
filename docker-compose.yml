@@ -4,7 +4,6 @@ volumes:
     node-red-data:
     mqtt-bridge-data:
     hass-data:
-    sonos-api-data:
 services:
     mosquitto:
         build: ./docker-rpi-mosquitto
@@ -39,5 +38,3 @@ services:
     sono-api:
         build: ./docker-sonos-api
         network_mode: "host"
-        volumes:
-            - "sonos-api-data:/data"
