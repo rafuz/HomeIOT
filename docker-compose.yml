@@ -35,7 +35,9 @@ services:
         volumes:
             - hass-data:/config
     mqtt-bridge:
-        build: ./docker-mqtt-bridge
+        build:
+            context: ./smartthings-mqtt-bridge
+            dockerfile: Dockerfile-rpi
         image: stjohnjohnson/smartthings-mqtt-bridge
         volumes:
             - "mqtt-bridge-data:/config"
