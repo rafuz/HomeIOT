@@ -108,10 +108,10 @@ module.exports = {
             username: process.env.USERNAME,
             password: process.env.PASSWORD,
             permissions: "*"
-        }],
-        default: {
-            permissions: "read"
-        }
+        }]
+        / default: {
+        /     permissions: "read"
+        / }
     },
 
     // To password protect the node-defined HTTP endpoints (httpNodeRoot), or
