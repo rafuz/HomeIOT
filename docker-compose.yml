@@ -20,6 +20,3 @@ services:
             - "8080:8080"
         links:
             - mosquitto
-    sono-api:
-        build: ./docker-sonos-api
-        network_mode: "host"
